@@ -7,74 +7,43 @@ redirect_from:
   - /about.html
 ---
 
+This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
 
-**欢迎来到我的简历网站**
+A data-driven personal website
+======
+Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
 
+Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
 
-我，是一名高级生物医学科学家，现任职于飞秒激光研究中心（广州）有限公司。本网站旨在全面展示我在生物医学领域的学术历程、研究成果以及专业技能。在这里，您将深入了解我在荧光材料开发、生物成像技术应用以及科研成果转化等方面的探索与实践。
+Getting started
+======
+1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
+1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
+1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
+1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
+1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
+1. Check status by going to the repository settings, in the "GitHub pages" section
 
-**学术生涯概览**
+Site-wide configuration
+------
+The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
 
-我的学术生涯始于对化学工程与技术的执着追求。2008年，我毕业于武汉科技大学，获得化学工程与技术专业的学士学位，为未来的学术研究奠定了坚实的理论基础。随后，我继续深造，于2012年在武汉科技大学荣获化学工程与工艺专业的博士学位。在博士期间，我深入研究了葫芦[10]脲，一种超分子主体化合物，与各种环状分子的主客体行为，为后续的科研工作积累了宝贵的经验。
+Create content & metadata
+------
+For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
 
-2015年，我有幸成为马里兰大学的交流学者，专注于超分子化学领域的研究。这段经历拓宽了我的国际视野，使我接触到前沿的科研理念和技术，对未来的学术发展产生了深远的影响。
+**Markdown generator**
 
-博士毕业后，我积极投身于博士后研究工作。在深圳大学屈军乐教授课题组，我致力于活细胞超分辨荧光材料的开发，这一研究方向将化学合成与生物成像相结合，极具挑战性和创新性。随后，我加入南方科技大学喻志强教授课题组，与何前军教授共同开展气体分子荧光探针的开发工作。这段经历使我在荧光探针的设计、合成及应用方面积累了丰富的经验。
+The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
+) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
 
-多年来，我始终专注于荧光材料的基础研究及转化应用，成功开发出多款具有重要应用价值的生物探针，包括线粒体超分辨荧光成像生物探针、活体氢气检测生物探针以及细胞微环境荧光探针等。这些研究成果不仅在学术界引起广泛关注，也在实际应用中展现出巨大的潜力。
+How to edit your site's GitHub repository
+------
+Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
 
-**科研成果与学术贡献**
+Example: editing a markdown file for a talk
+![Editing a markdown file for a talk](/images/editing-talk.png)
 
-我在国际知名期刊上发表论文二十余篇，包括Angewandte Chemie、Biomaterials、Coordination Chemistry Reviews等。这些论文详细介绍了我在荧光材料、生物成像等领域的研究成果，展现了我扎实的科研能力和创新精神。
-
-此外，我作为负责人及主要参与人，完成了多项国家级、省市级科研项目，共计六项。这些项目涵盖了荧光探针的开发、聚集诱导发光材料的产业化应用以及新型成像系统的研发等多个方面，充分体现了我承担重要科研任务的能力和团队协作精神。
-
-最近，我作为副主编参与编写的图书《AIE生物成像图谱及技术手册》也已经上架各大商城，它系统呈现了“聚集诱导发光”（aggregation-induced emissin，AIE）材料在生命科学领域的创新突破与实践成果。全书通过三大模块构建知识体系：基础理论部分阐释了AIE材料的发光机制与特性优势以及荧光成像技术的广泛应用场景；图谱部分详细展示了AIE材料在不同层次的生物成像实例，涵盖生物大分子、细胞器、细胞及活体；常见问题部分针对荧光成像中的常见问题给出原因分析及解决方案，可助力初入荧光成像领域的基础及临床工作者快速了解相关知识。全书收录超过500幅技术原理及高清显微图像，直观呈现了AIE材料在不同环境及应用场景中的高信噪比、高靶向性、高稳定性及高穿透性等技术优势。成像图例提供了对应的AIE分子结构及详细的成像参数，为读者提供全面的技术参考。作为材料科学与生物医学的交叉研究成果，本书既可作为高校“生物医学工程”专业研究生教材，也可为相关生物技术企业研发部门提供技术转化指南，同时也能成为生物、医学等工作者的工具书。
-
-**专业技能**
-
-在多年的科研实践中，我掌握了多项专业技能，这些技能是我开展科研工作的重要保障，也是我不断取得突破的关键因素。
-
-* **有机化学：** 我熟练掌握有机合成技巧，能够独立设计并完成15步以内的分子合成。我具备高效、准确的实验经验和能力，能够确保实验结果的可靠性。同时，我对有机化合物的结构表征有着深入的了解，能够熟练操作多种仪器，并准确分析表征结果。此外，我还在分子设计方面具备一定的能力，能够根据不同的应用需求，设计具有特定功能的荧光探针。
-
-* **生物成像：** 我熟练掌握多种荧光成像设备的操作，包括普通荧光显微镜、共聚焦激光显微镜、小动物3D成像、STORM超分辨荧光显微镜以及STED超分辨荧光显微镜。我对荧光探针的染色操作有着丰富的经验，能够独立分析成像结果，并根据分析结果优化实验方案。此外，我还熟悉荧光图片的处理及结果分析，熟练掌握不同仪器的软件操作以及ImageJ等图像处理软件的应用。
-
-* **信息处理：** 在信息时代，高效的信息处理能力至关重要。我能够熟练运用多种搜索引擎和学术数据库，优化关键字和搜索字符串，迅速定位相关文献。我善于使用过滤器和高级搜索功能，提高搜索结果的准确性。同时，我具备多学科知识背景，能够涵盖不同领域的学术文献，实现跨学科的资源整合。在信息提炼方面，我能够通过系统阅读和分析学术文献，提炼出关键信息，并运用图表、图形等可视化工具，将复杂信息以清晰的形式呈现。
-
-* **成果转化：** 科研成果的转化是实现科研价值的重要途径。我熟悉科研成果的转化流程及相关领域的知识，能够对特定产品的产业化潜力进行定性和定量的判断。我对专业领域的市场需求敏感，能够根据市场需求快速调整产业化方向。在文字表达方面，我熟练掌握标准写作与表达技巧，具备丰富的基金申请经验，擅长各类基金的策划、撰写与申请。此外，我具有出色的环境适应和学习能力，能够迅速融入新的工作环境，并快速掌握新的工作内容和技能，确保高效地完成任务。
-
-**工作经历**
-
-我的工作经历涵盖了学术研究和产业化应用两个方面。
-
-* 2017年，我从武汉科技大学博士毕业后，进入深圳大学屈军乐教授课题组从事博士后研究，主要研究方向为活细胞超分辨荧光材料的开发。
-
-* 之后，我加入南方科技大学喻志强教授课题组，与何前军教授一起从事气体分子荧光探针的开发工作。
-
-* 2021年，我进入广东省大湾区华南理工大学聚集诱导发光高等研究院，从事聚集诱导发光材料的产业化研究。在此期间，我负责多个研发项目，包括细胞器荧光探针的开发、近红外纳米粒子的开发、AIE纳米粒子自动化设备的开发、白细胞五分类染色液的开发、AIE标记噬菌体的开发、基于AIE的药敏技术的开发以及AIE抗体标记试剂盒等。我成功完成了AIE分子的公斤级生产工艺，并组建了研究院的细胞荧光成像平台和微生物荧光成像平台。此外，我还主导建设了全球首个以光谱为核心的大型分子数据库——聚集体科学数据库（www.asbase.cn）。
-
-* 2025年，我加入飞秒激光研究中心（广州）有限公司，开始从事硬件设备的开发工作，主要负责公司第二代飞秒激光无标记成像系统在活细胞领域的开发。
-
-**研究兴趣**
-
-我的研究兴趣广泛，主要包括：
-
-* **超分子化学：** 超分子化学是研究分子间相互作用的学科，它为构建具有复杂功能的新材料提供了重要的理论基础和方法。
-
-* **聚集诱导发光（AIE）：** AIE是一种特殊的荧光现象，指某些分子在聚集状态下会增强发光。AIE材料在生物成像、传感器等领域具有广泛的应用前景。
-
-* **荧光材料：** 荧光材料是指能够吸收光能并发出荧光的物质。开发新型荧光材料是生物成像技术发展的重要驱动力。
-
-* **成像系统：** 成像系统是用于获取图像的设备。开发高性能的成像系统能够提高成像质量，为生物医学研究提供更强大的工具。
-
-* **气体治疗：** 气体治疗是指利用某些气体分子治疗疾病的方法。开发能够检测和调控气体分子的荧光探针，对于气体治疗的发展具有重要意义。
-
-* **生物成像：** 生物成像是指利用各种技术手段获取生物样品图像的方法。生物成像技术在疾病诊断、药物研发等领域具有广泛的应用。
-
-**联系方式**
-
-
-**结语**
-
-感谢您花时间浏览我的学术简历网站。我希望通过这个平台，能够与更多同行交流学术思想，分享研究成果，共同推动生物医学领域的进步。我将继续秉持严谨的科学态度和不断探索的创新精神，为科学研究和社会发展贡献自己的力量。
-
+For more info
+------
+More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
