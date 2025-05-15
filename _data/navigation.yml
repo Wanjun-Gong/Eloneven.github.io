@@ -14,8 +14,11 @@ main:
   - title: "Talks"
     url: /talks/    
 
-  - title: "Teaching"
-    url: /teaching/    
+  - title: "Projects"
+    url: /Projects/    
+
+  - title: "Patent"
+    url: /Patent/    
     
   - title: "Portfolio"
     url: /portfolio/
