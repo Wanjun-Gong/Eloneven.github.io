@@ -18,7 +18,7 @@ TIMEOUT = 5
 g = glob.glob("_talks/*.md")
 
 # Prepare to geolocate
-geocoder = Nominatim(user_agent="eloneven.vercel.app")
+geocoder = Nominatim(user_agent="grenemal.github.io")
 location_dict = {}
 location = ""
 permalink = ""
