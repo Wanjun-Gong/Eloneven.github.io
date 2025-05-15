@@ -13,7 +13,7 @@ title                    : "ElOneven的自我介绍"
 title_separator          : "-"
 name                     : &name "龚晚君"
 description              : &description "博士，飞秒激光研究中心（广州）有限公司高级生物医学科学家，主要负责公司第二代飞秒激光无标记成像系统在活细胞领域的开发，2017年毕业于武汉科技大学，后在深圳大学屈军乐教授课题组从事博后研究，主要研究方向为活细胞超分辨荧光材料的开发，之后进入南方科技大学喻志强教授课题组，与何前军教授一起从事气体分子荧光探针的开发工作，常年专注于荧光材料的基础研究及转化应用，开发出多款线粒体超分辨荧光成像生物探针、活体氢气检测生物探针、细胞微环境荧光探针等，在Angew Chem. Biomaterials, Coor. Chem. Rev.等国际知名期刊发表论文二十余篇，作为负责人及主要参与人完成了国家级3项、省市级项目3项；2021年进入广东省大湾区华南理工大学聚集诱导发光高等研究院，从事聚集诱导发光材料的产业化研究，作为负责人先后完成了包括细胞器荧光探针的开发、近红外纳米粒子的开发、AIE纳米粒子自动化设备的开发、白细胞五分类染色液的开发、AIE标记噬菌体的开发、基于AIE的药敏技术的开发及AIE抗体标记试剂盒等多个研发项目，完成了AIE分子的公斤级生产工艺，组建了研究院细胞荧光成像平台、微生物荧光成像平台等，同时主导建设了全球首个以光谱为核心的大型分子数据库——聚集体科学数据库（www.asbase.cn），2025年加入飞秒激光研究中心（广州）有限公司，开始硬件设备的开发。"
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+url                      : https://eloneven.vercel.app # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "https://eloneven.vercel.app/" # the subpath of your site, e.g. "/blog"
 repository               : ""
 
