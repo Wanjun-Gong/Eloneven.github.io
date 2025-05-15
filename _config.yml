@@ -15,7 +15,7 @@ name                     : &name "龚晚君" #改成自己的名字，或者不�
 description              : &description "一个介绍自己的网站" #可以随便填，无所谓
 url                      : "https://grenemal.github.io/eloneven" # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog" # 不需要填写，无所谓
-repository               : "grenemal/eloneven" # 一定要填，不填的话次级页面加载不出来
+repository               : "" # 一定要填，不填的话次级页面加载不出来
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
